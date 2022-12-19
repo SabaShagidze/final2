@@ -294,6 +294,11 @@ body {
     rgba(247, 124, 16, 0.77),
     var(--background-color) 40%
   );
+  max-width: 100%;
+}
+
+.network-left img {
+  max-width: 100%;
 }
 
 .network-right {
