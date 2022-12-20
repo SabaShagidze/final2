@@ -11,6 +11,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  background: var(--background-color);
 }
 
 :root {
@@ -29,6 +30,7 @@ body {
   align-items: center;
   padding: 15px 50px;
   background-color: black;
+  /* flex-wrap: wrap; */
 }
 
 .nav-item-container ul {
@@ -50,7 +52,7 @@ body {
 }
 
 .nav-menu {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,7 +106,7 @@ body {
 }
 
 .download {
-  width: 13rem;
+  width: 10rem;
   border: none;
   font-weight: bolder;
   font-size: 15px;
@@ -467,7 +469,7 @@ option {
 
 .sale-img {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
 }
 
 /* Store */
@@ -516,7 +518,7 @@ option {
 
 /* Sale */
 .holiday-container {
-  padding: 5rem 3rem;
+  padding: 2rem 3rem;
   background-color: var(--background-color);
 }
 .holiday-card-container {
@@ -528,7 +530,7 @@ option {
 }
 .holiday-card {
   min-height: 30rem;
-  min-width: 17rem;
+  min-width: 18rem;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -536,7 +538,7 @@ option {
 }
 .holiday-card-img {
   height: 23rem;
-  width: 100%;
+  max-width: 100%;
 }
 .sale-img {
   width: 100%;
@@ -598,7 +600,165 @@ option {
   transform: translateY(-15px);
 }
 
-@media (max-width: 768px) {
+/* Banner */
+.holiday-banner {
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  margin-bottom: 2rem;
+}
+
+.banner-inner {
+  height: 15rem;
+  width: 100%;
+  background: linear-gradient(90deg, #00b0f6b1, #b60040ac 95%),
+    url(../images/store/banner.jpg);
+  background-position: top;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.banner-inner-left img {
+  max-height: 100%;
+}
+
+.banner-inner-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.banner-inner-right h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px #fff;
+}
+
+.banner-inner-right p {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 3px #fff;
+}
+
+.banner-inner-right button {
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg, #009b05, #01ff45);
+  color: #fff;
+  text-shadow: 0 0 3px #fff;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-inner-right button:hover {
+  transform: translateY(-5px);
+}
+
+#valid {
+  font-size: 0.8rem;
+}
+
+/* Plus */
+.access {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 30rem;
+}
+.access-one {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #00b0f677, #00b0f672 95%),
+    url(../images/store/plus/uplus.webp);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.access-left {
+  min-width: 50%;
+}
+
+.access-right {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.796);
+}
+
+.access-right-inner {
+  max-width: 90%;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.access-right-inner h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.access-right-inner p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.access-right-inner button {
+  width: 60%;
+  height: 2.5rem;
+  border-radius: 50px;
+  border: 2px solid #00b4fb;
+  color: #00b4fb;
+  background: transparent;
+  font-weight: bold;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.access-right-inner button:hover {
+  background: #00b4fb;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.access-two {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #00b0f677, #00b0f672 95%),
+    url(../images/store/plus/uplustwo.webp);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.access-one:hover {
+  transform: translateY(-1rem);
+}
+.access-two:hover {
+  transform: translateY(-1rem);
+}
+
+@media (max-width: 812px) {
   /* Navigation */
   .navbar {
     padding: 25px 25px;
@@ -787,4 +947,27 @@ option {
     justify-content: center;
     align-items: center;
   }
+  .holiday-header {
+    text-align: center;
+  }
+
+  /* banner */
+  .banner-inner img {
+    display: none;
+  }
+
+  .banner-inner {
+    background-size: cover;
+    width: 90%;
+  }
+
+  .banner-inner-right {
+    text-align: start;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  /* Access */
+
 }
