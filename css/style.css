@@ -875,6 +875,9 @@ option {
 }
 
 /* Product Description */
+.prod-des {
+  background: rgb(230, 230, 230);
+}
 .prod-des-inner {
   padding: 3rem;
   display: flex;
@@ -888,12 +891,12 @@ option {
   font-weight: bold;
 }
 
-#des-header-one {
+.prod-des-header {
   color: black;
 }
 
 .prod-des-one {
-  background: linear-gradient(#fff, var(--background-color));
+  background: linear-gradient(#fff, rgb(230, 230, 230));
 }
 
 .prod-des-media {
