@@ -265,6 +265,10 @@ footer {
   transition: all 0.3s;
 }
 
+.mid-card i {
+  color: #fff;
+}
+
 .mid-card:hover {
   transform: translateY(-10px);
 }
