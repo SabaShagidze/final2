@@ -419,7 +419,6 @@ footer {
 /* Footer */
 footer {
   background: var(--background-color);
-  margin-top: 15rem;
 }
 .footer-top {
   display: flex;
@@ -592,7 +591,7 @@ option {
 }
 .holiday-card {
   min-height: 30rem;
-  min-width: 18rem;
+  max-width: 100%;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -739,7 +738,8 @@ option {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 30rem;
+  flex-wrap: wrap;
+  min-height: fit-content;
 }
 .access-one {
   min-width: fit-content;
@@ -863,6 +863,7 @@ option {
 .product-left-top img {
   cursor: pointer;
   transition: all 0.3s;
+  max-width: 100%;
 }
 
 .product-left-top img:hover {
@@ -1029,7 +1030,7 @@ option {
   font-size: 1.5rem;
 }
 
-@media (max-width: 812px) {
+@media (max-width: 900px) {
   /* Navigation */
   .navbar {
     padding: 25px 25px;
@@ -1134,7 +1135,7 @@ option {
   }
 
   .top-container-right img {
-    width: 80%;
+    max-width: fit-content;
   }
 
   .top-container-right h2 {
@@ -1310,7 +1311,6 @@ option {
   .access {
     flex-direction: column;
     min-height: fit-content;
-    margin: 20rem 0;
   }
   .access-one {
     width: 100%;
